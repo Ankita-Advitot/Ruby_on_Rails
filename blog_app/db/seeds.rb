@@ -29,3 +29,18 @@ puts "Creating unpublished blogs..."
     published: false
   )
 end
+10.times do
+  Blog.create!(
+    title: Faker::Book.title,
+    content: Faker::Lorem.paragraph,
+    published: true
+  )
+end
+
+10.times do
+  Blog.create!(
+    title: Faker::Book.title,
+    content: Faker::Lorem.paragraph,
+    published: false
+  )
+end
