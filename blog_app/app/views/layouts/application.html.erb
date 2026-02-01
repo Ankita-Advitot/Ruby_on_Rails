@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlogApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  </head>
+
+  <body>
+    <header>
+      <h1>My Blog App</h1>
+      <%= link_to "Blogs", blogs_path %>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+      <p>© BlogApp</p>
+    </footer>
+  </body>
+</html>

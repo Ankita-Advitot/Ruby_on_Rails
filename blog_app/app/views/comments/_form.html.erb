@@ -1,0 +1,11 @@
+<%= form_with(model: [@blog, @comment], local: true) do |form| %>
+    <div>
+      <%= form.label :body, "Add Comment" %><br>
+      <%= form.text_area :body %>
+    </div>
+  
+    <div>
+      <%= form.submit "Post Comment" %>
+    </div>
+  <% end %>
+  

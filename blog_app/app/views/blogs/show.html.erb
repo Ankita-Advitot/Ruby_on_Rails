@@ -1,0 +1,12 @@
+<h2>Comments</h2>
+
+<% @blog.comments.each do |comment| %>
+  <p>
+    <%= comment.body %>
+    <%= button_to "Delete",
+        blog_comment_path(@blog, comment),
+        method: :delete %>
+  </p>
+<% end %>
+
+<%= render "comments/form", blog: @blog, comment: Comment.new %>
